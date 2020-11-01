@@ -155,4 +155,12 @@ i {
   background: #EAEEFF;
   padding: 10px;
 }
+
+.register-box, .login-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
 /*# sourceMappingURL=login-register.css.map */
