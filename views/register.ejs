@@ -12,17 +12,30 @@
         <h1 class="header">Register</h1>
         <h3>Get started!</h3>
         <form action="/register" method="POST">
-            <div class="name">
-                <input type="text" id="name" name="name" required class="form-name" autocomplete="off" placeholder="username">
+            <div class="name-box">
+                <div class="name">
+                    <i class="fas fa-signature circle"></i>
+                    <div class="pad-input">
+                        <input type="text" id="name" name="name" required class="form-name" autocomplete="off" placeholder="username">
+                    </div>
+                </div>
             </div>
             <div class="email">
-                <input type="text" id="email" name="email" required class="form-email" placeholder="email" autocomplete="off">
+                <i class="fas fa-envelope circle"></i>
+                <div class="pad-input">
+                    <input type="text" id="email" name="email" required class="form-email" placeholder="email" autocomplete="off">
+                </div>
             </div>
-            <div class="password">
-                <input type="password" id="password" name="password" required class="form-password" placeholder="password" autocomplete="off">
+            <div class="password-box">
+                <div class="password">
+                    <i class="fas fa-lock circle"></i>
+                    <div class="pad-input">
+                        <input type="password" id="password" name="password" required class="form-password" placeholder="password" autocomplete="off">
+                    </div>
+                </div>
             </div>
         </form>
-        <button type="submit" class="register">Register</button>
+        <button type="submit" class="register"><i class="fas fa-arrow-right pad-arrow"></i>Register</button>
     
         <div class="register-text">
             <a href="/login" class="register-page">Already have an account? Login.  <i class="fas fa-arrow-right"></i></a>
