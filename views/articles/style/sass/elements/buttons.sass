@@ -1,0 +1,27 @@
+$blue-gradient: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%)
+
+.button
+	border-radius: 12px
+	transform: scale(1, 1)
+	transition: 0.1s linear all
+	&:hover
+		transform: scale(1.1, 1.1)
+
+.bluegrad
+	color: white
+	background: $blue-gradient
+
+/* Used from https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+
+.noselect
+	-webkit-touch-callout: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+button
+	font-family: "Inter", sans-serif
+	&:hover
+		cursor: pointer

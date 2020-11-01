@@ -1,0 +1,39 @@
+.new-article {
+  padding: 10px;
+  height: 20px;
+}
+
+.read-more {
+  padding: 10px;
+  height: 20px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+}
+
+.left {
+  padding: 0;
+}
+
+.form-padding {
+  padding-left: 10px;
+}
+
+.logout {
+  padding: 10px;
+  font-size: 18px;
+}
+/*# sourceMappingURL=home.css.map */

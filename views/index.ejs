@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/articles-all.css" rel="stylesheet" />
+  <title>Home - AwesomeSource</title>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1 class="title">AwesomeSource</h1>
+    </div>
+    <div class="right">
+      <a href="/new" class="bluegrad new-article button">Write A Post</a>
+      <form action="/logout?_method=DELETE" method="POST" class="form-padding">
+        <button type="submit" class="bluegrad logout button">Log Out</button>
+      </form>
+    </div>
+  </div>
+  <% articles.forEach(article => { %>
+    <div class="article-card">
+      <div class="card-body">
+        <h4 class="card-title card-color"><%= article.title %></h4>
+        <p class="card-date card-color"><%= article.createdAt.toLocaleDateString() %> - Written by <%= article.username %></p>
+        <p class="card-description card-color"><%= article.description %></p> 
+      </div>
+      <div class="readmore-div">
+        <a href="/<%= article.slug %>" class="bluegrad button noselect read-more">Read More</a>
+      </div>
+    </div>
+  <% }) %>
+</body>
+</html>

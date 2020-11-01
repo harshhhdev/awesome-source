@@ -1,0 +1,17 @@
+/* Main stylesheet */
+
+@import url("./sass/other/main.css");
+
+/* Elements */
+
+@import url("./sass/elements/buttons.css");
+@import url("./sass/elements/text.css");
+@import url("./sass/elements/card.css");
+@import url("./sass/elements/forms.css");
+@import url("./sass/elements/scrollbar.css");
+
+/* Pages */
+
+@import url("./sass/pages/home.css");
+@import url("./sass/pages/new.css");
+@import url("./sass/pages/show.css");

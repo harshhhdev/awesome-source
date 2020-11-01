@@ -1,0 +1,35 @@
+.button {
+  border-radius: 12px;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+
+.button:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.bluegrad {
+  color: white;
+  background: linear-gradient(134deg, #6a98f0 0%, #4961dc 99%);
+}
+
+/* Used from https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=buttons.css.map */

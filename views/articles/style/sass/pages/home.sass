@@ -1,0 +1,35 @@
+@mixin centerContent
+	display: flex
+	justify-content: center
+
+@mixin centerSelf()
+	display: flex
+	justify-self: center
+
+@mixin goodButton()
+	padding: 10px
+	height: 20px
+
+.new-article
+	@include goodButton()
+
+.read-more
+	@include goodButton()
+
+.container
+	display: flex
+	justify-content: space-between
+
+.right
+	display: flex
+	padding: 30px
+
+.left
+	padding: 0
+
+.form-padding
+	padding-left: 10px
+
+.logout
+	padding: 10px
+	font-size: 18px

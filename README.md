@@ -8,20 +8,21 @@ Whlie wanting to contribute to open-source projects, people often have to go thr
 
 # Built with
 
- - MongoDB
- - Node.js
- - Express
- 
+- MongoDB
+- Node.js
+- Express
+
 # Getting started
 
 ## Prerequisites
 
- - Node.js
- - MongoDB
- - npm (ships with Node.js, no need to install it in most cases)
- 
+- Node.js
+- MongoDB
+- npm (ships with Node.js, no need to install it in most cases)
+
 ## Building
 
- - Clone the repo (`git clone url`)
- - Install the pacakges (`npm install`)
- - Add your Mongo connection key in the server.js file.
+- Clone the repo (`git clone url`)
+- Install the pacakges (`npm install`)
+- Add your Mongo connection key in the server.js file.
+- Start it (`node server.js`) and navigate to `localhost:5000` in your browser.

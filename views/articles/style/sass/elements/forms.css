@@ -1,0 +1,96 @@
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-title {
+  background: #6D83F2;
+  resize: none;
+  border-radius: 12px;
+  height: 50px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.form-description {
+  background: #6D83F2;
+  resize: none;
+  border-radius: 12px;
+  height: 100px;
+  padding: 10px;
+  width: 400px;
+  font-size: 16px;
+}
+
+.form-markdown {
+  background: #6D83F2;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 12px;
+  resize: vertical;
+  width: 800px;
+  height: 500px;
+}
+
+.form-group {
+  padding: 20px 0;
+}
+
+.buttons {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 4%;
+}
+
+textarea {
+  color: white;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
+textarea:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  cursor: pointer;
+}
+
+input {
+  color: white;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+}
+
+input:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+::-webkit-input-placeholder {
+  color: #dbdbdb;
+}
+
+:-ms-input-placeholder {
+  color: #dbdbdb;
+}
+
+::-ms-input-placeholder {
+  color: #dbdbdb;
+}
+
+::placeholder {
+  color: #dbdbdb;
+}
+/*# sourceMappingURL=forms.css.map */

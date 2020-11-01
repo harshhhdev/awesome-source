@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/articles-all.css" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AwesomeSource - <%= article.title %></title>
+</head>
+<body>
+  <div class="show-box">
+    <h1 class="title show-title"><%= article.title %></h1>
+    <div class="post-markdown">
+      <%- article.sanitizedHtml %>
+    </div>
+    <div class="show-date">
+      <%= article.createdAt.toLocaleDateString() %> | Written by <%= article.username %>
+    </div>
+  </div>
+
+  <div class="buttons show-buttons">
+    <div class="home-parent">
+      <a href="/" class="bluegrad button noselect home">All posts</a>
+    </div>
+    <div class="project-parent">
+      <a href="<%= article.link %>" class="bluegrad button noselect project">View Project</a>
+    </div>
+
+  </div>
+</body>
+</html>

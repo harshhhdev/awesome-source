@@ -1,0 +1,36 @@
+.card-color {
+  color: #F8F8F8;
+}
+
+.article-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+.card-body {
+  border-radius: 12px;
+  padding: 10px;
+  width: 25%;
+  background: #6A98F0;
+  -webkit-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+
+.card-body:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.readmore-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0;
+}
+/*# sourceMappingURL=card.css.map */
