@@ -1,4 +1,5 @@
 .header {
+  margin-bottom: 0;
   color: #222222;
   font-size: 48px;
 }
@@ -17,25 +18,40 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .form-email, .form-password, .form-name {
-  background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);
+  background: #EAEEFF;
+  color: #403F4B;
   padding: 20px;
-  border-radius: 12px;
-  color: #f8f8f8;
-  font-size: 20px;
+  border-radius: 50px;
+  font-size: 14px;
   -webkit-transition: 0.1s linear all;
   transition: 0.1s linear all;
 }
 
-.form-email:hover, .form-password:hover, .form-name:hover {
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+.password-box, .name-box, .email-box {
+  padding: 20px 0;
 }
 
 .password, .email, .name {
-  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  -webkit-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+
+.password:hover, .email:hover, .name:hover {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
 }
 
 form {
@@ -49,15 +65,19 @@ form {
   padding-bottom: 30px;
 }
 
+.pad-input {
+  padding-left: 20px;
+}
+
 .login {
   padding: 15px;
-  font-size: 20px;
-  background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);
-  color: #f8f8f8;
-  border-radius: 12px;
+  font-size: 14px;
+  background: #586FFA;
+  color: #EAEEFF;
+  border-radius: 50px;
   -webkit-transition: 0.1s linear all;
   transition: 0.1s linear all;
-  width: 100px;
+  width: 150px;
 }
 
 .login:hover {
@@ -66,27 +86,24 @@ form {
 }
 
 .register {
-  width: 130px;
   padding: 15px;
-  font-size: 20px;
-  background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);
-  color: #f8f8f8;
-  border-radius: 12px;
+  font-size: 14px;
+  background: #586FFA;
+  color: #EAEEFF;
+  border-radius: 50px;
   -webkit-transition: 0.1s linear all;
   transition: 0.1s linear all;
+  width: 150px;
 }
 
 .register:hover {
-  cursor: pointer;
   -webkit-transform: scale(1.05, 1.05);
           transform: scale(1.05, 1.05);
 }
 
-.triangle {
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzI1IiBoZWlnaHQ9Ijk5MCIgdmlld0JveD0iMCAwIDcyNSA5OTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHg9IjY2My45NzMiIHk9Ii00NTQiIHdpZHRoPSIxMjcwLjAzIiBoZWlnaHQ9IjkzOSIgcng9IjE1IiB0cmFuc2Zvcm09InJvdGF0ZSg0NSA2NjMuOTczIC00NTQpIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXIpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MF9saW5lYXIiIHgxPSI2NjMuOTczIiB5MT0iLTQ1NCIgeDI9IjE1NTkuNjMiIHkyPSI3NTcuNDEyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiM2QTk4RjAiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNDk2MURDIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg==");
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-  overflow-y: hidden;
+.pad-arrow {
+  font-size: 14px;
+  padding-right: 20px;
 }
 
 i {
@@ -103,6 +120,10 @@ i {
   -webkit-transform: translateX(3px);
           transform: translateX(3px);
   color: #547cc7;
+}
+
+.register-text {
+  padding-top: 20px;
 }
 
 .warning {
@@ -127,5 +148,11 @@ i {
 ::placeholder {
   color: #222222;
   opacity: 0.5;
+}
+
+.circle {
+  border-radius: 50px;
+  background: #EAEEFF;
+  padding: 10px;
 }
 /*# sourceMappingURL=login-register.css.map */
