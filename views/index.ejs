@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://kit.fontawesome.com/2ca6785a00.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/articles-all.css" rel="stylesheet" />
@@ -9,6 +10,12 @@
 <body>
   <div class="container">
     <div class="left">
+      <div class="searchbar">
+        <div class="search-box">
+          <input class="search" type="text" onkeyup="search()" id="search-articles" placeholder="Type here to search posts...">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </div>
       <h1 class="title">AwesomeSource</h1>
     </div>
     <div class="right">
@@ -18,17 +25,24 @@
       </form>
     </div>
   </div>
-  <% articles.forEach(article => { %>
-    <div class="article-card">
-      <div class="card-body">
-        <h4 class="card-title card-color"><%= article.title %></h4>
-        <p class="card-date card-color"><%= article.createdAt.toLocaleDateString() %> - Written by <%= article.username %></p>
-        <p class="card-description card-color"><%= article.description %></p> 
-      </div>
-      <div class="readmore-div">
-        <a href="/<%= article.slug %>" class="bluegrad button noselect read-more">Read More</a>
-      </div>
-    </div>
-  <% }) %>
+  <ul id="articles">
+    <% articles.forEach(article => { %>
+      <li class="card-list">
+        <div class="article-card">
+          <div class="card-body">
+            <h4 class="card-title card-color" id="article-title"><%= article.title %></h4>
+            <p class="card-date card-color"><%= article.createdAt.toLocaleDateString() %> - Written by <%= article.username %></p>
+            <p class="card-description card-color"><%= article.description %></p> 
+          </div>
+          <div class="readmore-div">
+            <a href="/<%= article.slug %>" class="bluegrad button noselect read-more">Read More</a>
+          </div>
+        </div>
+      </li>
+    <% }) %>
+  </ul>
 </body>
+
+<script src="/search.js"></script>
+
 </html>

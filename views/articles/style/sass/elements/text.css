@@ -6,5 +6,10 @@ h1 {
 .title {
   margin: 0;
   padding: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=text.css.map */

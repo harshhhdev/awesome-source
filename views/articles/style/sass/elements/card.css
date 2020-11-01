@@ -10,7 +10,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .card-body {
@@ -32,5 +32,9 @@
   display: -ms-flexbox;
   display: flex;
   padding: 20px 0;
+}
+
+.card-list {
+  list-style: none;
 }
 /*# sourceMappingURL=card.css.map */

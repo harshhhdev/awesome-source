@@ -1,0 +1,36 @@
+.searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 40px;
+}
+
+.search-box {
+  background: #6D83F2;
+  padding: 10px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 12px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.search {
+  background: none;
+}
+
+.search:hover {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.search, .search-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=search.css.map */
