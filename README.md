@@ -2,8 +2,6 @@
 
 # About
 
-This was made as a side project to help me dig deeper into using TypeScript, and to make something cool (and useful) in the process.
-
 Whlie wanting to contribute to open-source projects, people often have to go through the hassle of finding them on GitHub, and doing tons of other things. Awesome Source aims to simplify this. Maintainers and project owners can put the project up on the website, and people can have a much easier, and more simplified search system leading them to more direct results on open source projects which would best be fit for them.
 
 # Built with
