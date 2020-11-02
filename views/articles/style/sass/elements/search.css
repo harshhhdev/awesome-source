@@ -3,16 +3,17 @@
   display: -ms-flexbox;
   display: flex;
   padding-left: 40px;
+  white-space: pre;
 }
 
 .search-box {
-  background: #6D83F2;
+  background: #6A98F0;
   padding: 10px;
   height: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 12px;
+  border-radius: 50px;
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-transition: 0.1s linear;

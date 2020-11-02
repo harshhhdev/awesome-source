@@ -7,26 +7,38 @@
     <title>Login - AwesomeSource</title>
     <link rel="stylesheet" href="/all.css" />
 </head>
-<body class="triangle">
+<body>
     <div class="content">
-        <h1 class="header">Login</h1>
+        <h1 class="header dark">Login</h1>
+        <h3>Glad to see you back!</h3>
         <% if (messages.error) { %>
             <h3 class="warning"><%= messages.error %></h3>
         <% } %>
         <form action="/login" method="POST">
-            <div class="email">
-                <input type="text" id="email" name="email" required class="form-email" placeholder="email" autocomplete="off">
+            <div class="email-box">
+                <div class="email">
+                    <i class="fas fa-envelope circle"></i>
+                    <div class="pad-input">
+                        <input type="text" id="email" name="email" required class="form-email" placeholder="email" autocomplete="off">
+                    </div>
+                </div>
             </div>
-            <div class="password">
-                <input type="password" id="password" name="password" required class="form-password" placeholder="password" autocomplete="off">
+            <div class="password-box">
+                <div class="password">
+                    <i class="fas fa-lock circle"></i>
+                    <div class="pad-input">
+                        <input type="password" id="password" name="password" required class="form-password" placeholder="password" autocomplete="off">
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="login">Login</button>
+            <div class="login-box">
+                <button type="submit" class="login"><i class="fas fa-arrow-right pad-arrow"></i>Login</button>
+            </div>
         </form>
     
         <div class="register-text">
             <a href="/register" class="login-page" style="white-space: pre;">Don't have an account? Sign up.  <i class="fas fa-arrow-right"></i></a>
         </div>
-
     </div>
 </body>
 </html>
