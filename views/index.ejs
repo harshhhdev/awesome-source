@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/2ca6785a00.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/articles-all.css" rel="stylesheet" />
+  <title>Home - AwesomeSource</title>
+</head>
+<body class="body-home">
+  <div class="container">
+    <div class="left">
+      <div class="top">
+        <div class="user-box">
+          <i class="far fa-user user-logo"></i>
+        </div>
+        <div class="info">
+          <h1 class="info-username"><%= name %></h1>
+          <h1 class="info-email"><%= email %></h1>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <div class="mid">
+          <div class="new">
+            <a href="/new" class="new-article" id="new"><i class="fas fa-pen"></i>   New Post</a>
+          </div>
+          <div class="home-box">
+            <a href="/" class="home-button" id="home"><i class="fas fa-home"></i>   Home</a>
+          </div>
+        </div>
+        <form action="/logout?_method=DELETE" method="POST" class="logout-form">
+          <button type="submit" class="logout"><i class="fas fa-sign-out-alt"></i>   Log Out</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="main-content">
+    <h1 class="discover">Discover</h1>
+    <div class="searchbar">
+      <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input class="search" type="text" onkeyup="search()" id="search-articles" placeholder="  Type here to search posts...">
+      </div>
+    </div>
+    <ul id="articles">
+      <% articles.forEach(article => { %>
+        <li class="card-list">
+          <div class="article-card">
+            <div class="card-body">
+              <h4 class="card-title card-color" id="article-title"><%= article.title %></h4>
+              <p class="card-date card-color"><%= article.createdAt.toLocaleDateString() %> - Written by <%= article.username %></p>
+              <p class="card-description card-color"><%= article.description %></p> 
+            </div>
+            <div class="readmore-div">
+              <a href="/<%= article.slug %>" class="bluegrad button noselect read">Read More</a>
+            </div>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+  <div class="right">
+    <h1 class="awesome">AwesomeSource</h1>
+    <p class="awesome-description">Open-source, made simple.</p>
+  </div>
+</body>
+<script src="/search.js"></script>
+</html>
