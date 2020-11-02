@@ -1,37 +1,98 @@
-@mixin centerContent
+$blue: #6D83F2
+$blue2: #6A98F0
+$white: #F8F8F8
+
+@mixin disflex()
 	display: flex
-	justify-content: center
+	flex-direction: column
 
-@mixin centerSelf()
-	display: flex
-	justify-self: center
-
-@mixin goodButton()
-	padding: 10px
-	height: 20px
-
-.new-article
-	@include goodButton()
-
-.read-more
-	@include goodButton()
-
-.container
-	display: flex
-	justify-content: space-between
-
-.right
-	display: flex
-	padding: 30px
-
-.left
-	padding: 0
+.body-home
 	display: flex
 	flex-direction: row
 
-.form-padding
-	padding-left: 10px
+.container
+	width: 35%
+	@include disflex()
+
+.left
+	top: 0
+	position: sticky
+	background: $blue2
+	color: $white
+	width: 100%
+	align-items: center
+	justify-content: center
+	height: 110vh
+	border-radius: 12px
+	@include disflex()
+
+.top
+	align-items: center
+	@include disflex()
+
+.user-box
+	font-size: 144px
+	@include disflex()
+
+.info
+	align-items: center
+	@include disflex()
+
+.info-username
+	margin-bottom: 0
+	font-size: 36px
+
+.info-email
+	font-size: 16px
+
+.buttons
+	@include disflex()
+
+.mid
+	@include disflex()
+
+.new, .home-box, .logout-form
+	padding: 10px 0
+	@include disflex()
+
+.logout-form
+	@include disflex()
 
 .logout
+	@include disflex()
+
+.new-article, .home-button, .logout
+	background: $blue
+	border-radius: 50px
 	padding: 10px
-	font-size: 18px
+	align-items: center
+	white-space: pre
+	color: $white
+	justify-content: center
+	align-self: center
+	transition: 0.1s linear all
+	&:hover
+		transform: scale(1.05, 1.05)
+		cursor: pointer
+
+.logout-form
+	transform: translateY(90%)
+
+.logout
+	display: inline
+
+.read
+	padding: 10px
+
+.discover
+	margin-top: 0
+	font-size: 48px
+	padding-left: 40px
+
+.awesome
+	margin-top: 0
+	margin-bottom: 0
+	font-size: 48px
+
+.awesome-description
+	text-align: right
