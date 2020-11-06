@@ -8,40 +8,40 @@
   <title>Home - AwesomeSource</title>
 </head>
 <body class="body-home">
-  <div class="container">
+  <div class="container account-container">
     <div class="left">
       <div class="top">
-        <div class="user-box">
-          <i class="far fa-user user-logo"></i>
-        </div>
-        <div class="info">
-          <h1 class="info-username"><%= name %></h1>
-          <h1 class="info-email"><%= email %></h1>
-        </div>
-      </div>
-
-      <div class="buttons">
-        <div class="mid">
-          <div class="new">
-            <a href="/new" class="new-article" id="new"><i class="fas fa-pen"></i>   New Post</a>
+        <div class="sidenav">
+          <div class="user-box">
+            <img src="<%= pic %>" class="user-picture" />
           </div>
-          <div class="home-box">
-            <a href="/" class="home-button" id="home"><i class="fas fa-home"></i>   Home</a>
+          <div class="info">
+            <h1 class="info-username"><%= name %></h1>
+            <h1 class="info-email"><%= email %></h1>
+          </div>
+          <div class="buttons">
+            <div class="mid">
+              <div class="new dashboard-pad">
+                <a href="/new" class="new-article dashboard-button" id="new"><i class="fas fa-pen pad-i"></i>New Post</a>
+              </div>
+              <div class="home-box dashboard-pad">
+                <a href="/" class="home-button dashboard-button" id="home"><i class="fas fa-home pad-i"></i>Home</a>
+              </div>
+            </div>
+            <div class="bottom dashboard-pad">
+              <a href="/logout" class="logout dashboard-button"><i class="fas fa-sign-out-alt pad-i"></i>Logout</a>
+            </div>
           </div>
         </div>
-        <a href="/logout">Logout</a>
-        <form action="/logout?_method=DELETE" method="POST" class="logout-form">
-          <button type="submit" class="logout"><i class="fas fa-sign-out-alt"></i>   Log Out</button>
-        </form>
       </div>
     </div>
   </div>
-  <div class="main-content">
+  <div class="main-content shift">
     <h1 class="discover">Discover</h1>
     <div class="searchbar">
       <div class="search-box">
         <i class="fas fa-search search-icon"></i>
-        <input class="search" type="text" onkeyup="search()" id="search-articles" placeholder="  Type here to search posts...">
+        <input class="search" type="text" onkeyup="search()" id="search-articles" placeholder="Search">
       </div>
     </div>
     <ul id="articles">
@@ -60,10 +60,6 @@
         </li>
       <% }) %>
     </ul>
-  </div>
-  <div class="right">
-    <h1 class="awesome">AwesomeSource</h1>
-    <p class="awesome-description">Open-source, made simple.</p>
   </div>
 </body>
 <script src="/search.js"></script>

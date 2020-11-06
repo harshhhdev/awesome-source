@@ -33,7 +33,11 @@ form
     height: 500px
 
 .form-group
+    display: flex
+    flex-direction: column
     padding: 20px 0
+    justify-content: center
+    align-items: center
 
 .buttons
     justify-content: center
@@ -55,3 +59,17 @@ input
 
 ::placeholder
     color: #dbdbdb
+
+#preview-markdown
+    padding-top: 0
+    background: $form-background
+    padding: 10px
+    font-size: 20px
+    color: white
+    transition: 0.2s linear all
+    border-radius: 12px
+    width: 800px
+    height: 500px
+
+#preview-markdown p h1 h2 h3 h4 h5 h6
+    margin: 1px 0 !important

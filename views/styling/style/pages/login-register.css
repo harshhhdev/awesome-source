@@ -1,166 +1,113 @@
-.header {
-  margin-bottom: 0;
-  color: #222222;
-  font-size: 48px;
+html {
+  background: #FBFBFF;
 }
 
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-transform: translateY(-7%);
-          transform: translateY(-7%);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.form-email, .form-password, .form-name {
-  background: #EAEEFF;
-  color: #403F4B;
-  padding: 20px;
-  border-radius: 50px;
-  font-size: 14px;
-  -webkit-transition: 0.1s linear all;
-  transition: 0.1s linear all;
-}
-
-.password-box, .name-box, .email-box {
-  padding: 20px 0;
-}
-
-.password, .email, .name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
-  -webkit-transition: 0.1s linear all;
-  transition: 0.1s linear all;
-}
-
-.password:hover, .email:hover, .name:hover {
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
-}
-
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 30px;
+  height: 90vh;
 }
 
-.pad-input {
-  padding-left: 20px;
-}
-
-.login {
-  padding: 15px;
-  font-size: 14px;
-  background: #586FFA;
-  color: #EAEEFF;
-  border-radius: 50px;
-  -webkit-transition: 0.1s linear all;
-  transition: 0.1s linear all;
-  width: 150px;
-}
-
-.login:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
-}
-
-.register {
-  padding: 15px;
-  font-size: 14px;
-  background: #586FFA;
-  color: #EAEEFF;
-  border-radius: 50px;
-  -webkit-transition: 0.1s linear all;
-  transition: 0.1s linear all;
-  width: 150px;
-}
-
-.register:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
-}
-
-.pad-arrow {
-  font-size: 14px;
-  padding-right: 20px;
-}
-
-i {
-  -webkit-transition: 0.1s linear all;
-  transition: 0.1s linear all;
-}
-
-.register-page, .login-page {
-  color: #6A98F0;
-  text-decoration: none;
-}
-
-.register-page:hover i, .login-page:hover i {
-  -webkit-transform: translateX(3px);
-          transform: translateX(3px);
-  color: #547cc7;
-}
-
-.register-text {
-  padding-top: 20px;
-}
-
-.warning {
-  color: #ff4949;
-}
-
-::-webkit-input-placeholder {
-  color: #222222;
-  opacity: 0.5;
-}
-
-:-ms-input-placeholder {
-  color: #222222;
-  opacity: 0.5;
-}
-
-::-ms-input-placeholder {
-  color: #222222;
-  opacity: 0.5;
-}
-
-::placeholder {
-  color: #222222;
-  opacity: 0.5;
-}
-
-.circle {
-  border-radius: 50px;
-  background: #EAEEFF;
-  padding: 10px;
-}
-
-.register-box, .login-box {
+.header {
+  font-size: 54px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -ms-flex-item-align: center;
       align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}
+
+.greeting {
+  padding-bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}
+
+.sign-in {
+  padding: 10px 15px;
+  background: white;
+  text-decoration: none;
+  border-radius: 50px;
+  -webkit-box-shadow: 3px 3px 15px #00000049;
+          box-shadow: 3px 3px 15px #00000049;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  justify-items: center;
+}
+
+.sign-in:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.google-icon {
+  color: #518ef8;
+  padding-right: 10px;
+  font-size: 24px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(134deg, #4c7eda 0%, #263db1 99%);
 }
 /*# sourceMappingURL=login-register.css.map */

@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://kit.fontawesome.com/2ca6785a00.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awesome Source - New Post</title>
   <link rel="stylesheet" href="/articles-all.css" />
 </head>
 <body>
-  <div class="new-box">
+  <div class="container account-container">
+    <div class="left">
+      <div class="top">
+        <div class="sidenav">
+          <div class="user-box">
+            <img src="<%= pic %>" class="user-picture" />
+          </div>
+          <div class="info">
+            <h1 class="info-username"><%= name %></h1>
+            <h1 class="info-email"><%= email %></h1>
+          </div>
+          <div class="buttons">
+            <div class="mid">
+              <div class="new dashboard-pad">
+                <a href="/new" class="new-article dashboard-button" id="new"><i class="fas fa-pen pad-i"></i>New Post</a>
+              </div>
+              <div class="home-box dashboard-pad">
+                <a href="/" class="home-button dashboard-button" id="home"><i class="fas fa-home pad-i"></i>Home</a>
+              </div>
+            </div>
+            <div class="bottom dashboard-pad">
+              <a href="/logout" class="logout dashboard-button"><i class="fas fa-sign-out-alt pad-i"></i>Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="new-box shift">
     <h1 class="title-new">New Post</h1>
 
-    <form action="/" method="POST">
+    <form action="/" method="POST" id="form-new">
       <div class="form-group">
-        <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-title" placeholder="Enter your post title here..." autocomplete="off">
+        <input required value="<%= article.title %>" type="text" name="title" id="title" class="form-title" placeholder="Title" autocomplete="off">
       </div>
       <div class="form-group">
-        <textarea name="description" id="description" class="form-description" placeholder="Enter a description..."><%= article.description %></textarea>
+        <textarea name="description" id="description" class="form-description" placeholder="Description"><%= article.description %></textarea>
       </div>
       <div class="form-group">
-        <textarea required name="markdown" id="markdown" class="form-markdown" placeholder="Enter your post content... (styling with Markdown is supported)"><%= article.markdown %></textarea>
+        <div class="preview-btn-parent">
+          <button class="preview-btn" id="preview" onclick="previewToggle()" type="button">Preview Markdown</button>
+        </div>
+        <div id="preview-markdown"></div>
+        <textarea required name="markdown" id="markdown" class="form-markdown" placeholder="Markdown" oninput="addMarkdown()"><%= article.markdown %></textarea>
       </div>
 
       <div class="form-group" style="display: none;">
@@ -26,14 +59,17 @@
       </div>
 
       <div class="form-group">
-        <input required name="link" id="link" class="form-title" placeholder="Enter the project link..." autocomplete="off">
+        <input required name="link" id="link" class="form-title" placeholder="Project Link" autocomplete="off">
       </div>
 
-      <div class="buttons">
+      <div class="btns">
         <div class="cancel-button"><a href="/" class="bluegrad button noselect cancel">Cancel</a></div>
-        <div class="publish-button"><button type="submit" class="bluegrad button noselect publish">Publish</button></div>
+        <div class="publish-button"><button type="submit" class="bluegrad button noselect publish"><i class="fas fa-rocket pad-i"></i>Publish</button></div>
       </div>
     </form>
   </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> 
+<script src="/markdown.js"></script>
+<script src="/preview.js"></script>
 </html>

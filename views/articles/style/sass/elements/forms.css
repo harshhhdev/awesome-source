@@ -44,7 +44,20 @@ form {
 }
 
 .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 20px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .buttons {
@@ -92,5 +105,22 @@ input:hover {
 
 ::placeholder {
   color: #dbdbdb;
+}
+
+#preview-markdown {
+  padding-top: 0;
+  background: #6D83F2;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  -webkit-transition: 0.2s linear all;
+  transition: 0.2s linear all;
+  border-radius: 12px;
+  width: 800px;
+  height: 500px;
+}
+
+#preview-markdown p h1 h2 h3 h4 h5 h6 {
+  margin: 1px 0 !important;
 }
 /*# sourceMappingURL=forms.css.map */

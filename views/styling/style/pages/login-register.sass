@@ -3,97 +3,60 @@ $dark: #222222
 $bluegrad: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%)
 $blue: #6A98F0
 
-.header
-    margin-bottom: 0
-    color: $dark
-    font-size: 48px
+html
+    background: #FBFBFF
+
+@mixin center()
+    display: flex
+    align-items: center
+    align-content: center
+    align-self: center
+    justify-content: center
+    justify-self: center
+    justify-items: center
 
 .content
     display: flex
-    height: 100vh
-    flex-direction: column
-    transform: translateY(-7%)
     justify-content: center
-    align-items: center
-
-.form-email, .form-password, .form-name
-    background: $light
-    color: #403F4B
-    padding: 20px
-    border-radius: 50px
-    font-size: 14px
-    transition: 0.1s linear all
-
-.password-box, .name-box, .email-box
-    padding: 20px 0
-
-.password, .email, .name
-    display: flex
-    align-items: center
-    padding: 20px
-    transition: 0.1s linear all
-    &:hover
-        transform: translateX(5px)
-
-form
-    display: flex
     flex-direction: column
-    padding-bottom: 30px
+    height: 90vh
 
-.pad-input
-    padding-left: 20px
+.header
+    font-size: 54px
+    @include center()
 
-.login
-    padding: 15px
-    font-size: 14px
-    background: #586FFA
-    color: $light
-    border-radius: 50px
-    transition: 0.1s linear all
-    width: 150px
-    &:hover
-        transform: scale(1.05, 1.05)
+.greeting
+    padding-bottom: 200px
+    @include center()
 
-.register
-    padding: 15px
-    font-size: 14px
-    background: #586FFA
-    color: $light
-    border-radius: 50px
-    transition: 0.1s linear all
-    width: 150px
-    &:hover
-        transform: scale(1.05, 1.05)
-
-.pad-arrow
-    font-size: 14px
-    padding-right: 20px
-
-i
-    transition: 0.1s linear all
-
-.register-page, .login-page
-    color: $blue
+.sign-in
+    padding: 10px 15px
+    background: white
     text-decoration: none
-    &:hover i
-        transform: translateX(3px)
-        color: #547cc7
-
-.register-text
-    padding-top: 20px
-
-.warning
-    color: #ff4949
-
-::placeholder
-    color: $dark
-    opacity: 0.5
-
-.circle
     border-radius: 50px
-    background: $light
-    padding: 10px
+    box-shadow: 3px 3px 15px #00000049
+    transition: 0.1s linear
+    @include center()
+    &:hover
+        transform: scale(1.05, 1.05)
 
-.register-box, .login-box
-    display: flex
-    align-self: center
+.google-icon
+    color: #518ef8
+    padding-right: 10px
+    font-size: 24px
+
+/* width */
+::-webkit-scrollbar
+    width: 10px
+
+/* Track */
+::-webkit-scrollbar-track
+    background: #f1f1f1
+
+/* Handle */
+::-webkit-scrollbar-thumb
+    background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%)
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+    background: linear-gradient(134deg, #4c7eda 0%, #263db1 99%)

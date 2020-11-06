@@ -10,6 +10,8 @@ require('./passport-config')
 app.use(express.static(__dirname + '/views/styling'))
 app.use(express.static(__dirname + '/views/articles/style'))
 app.use(express.static(__dirname + '/views/scripts'))
+app.use(express.static(__dirname + '/views/scripts'))
+app.use(express.static(__dirname + '/views/images'))
 
 mongoose.connect(process.env.MONGO_CONNECTION, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
@@ -44,7 +46,7 @@ app.get('/failed', (req, res) => res.send('You Failed to log in!'))
 
 app.get('/', isLoggedIn, async (req, res) => {
   const articles = await Article.find().sort({ createdAt: 'desc' })
-  res.render("index",{ article: articles, name:req.user.displayName,pic:req.user.photos[0].value,email:req.user.emails[0].value})
+  res.render("index",{ article: articles, name: req.user.displayName, pic:req.user.photos[0].value, email: req.user.emails[0].value })
 })
 
 // Auth Routes
@@ -65,6 +67,10 @@ app.get('/logout', (req, res) => {
 })
   
 app.set('view-engine', 'ejs')
+
+app.get('/privacy', (req, res) => {
+  res.render('privacy.ejs', { name: req.user.displayName, pic: req.user.photos[0].value, email: req.user.emails[0].value })
+})
   
 app.get('/login', (req, res) => {
     res.render('login.ejs')
@@ -73,7 +79,7 @@ app.get('/login', (req, res) => {
 app.set('view engine', 'ejs')
 
 app.get('/new', isLoggedIn, (req, res) => {
-  res.render('articles/new', { article: new Article(), name: req.user.displayName })
+  res.render('articles/new', { article: new Article(), name: req.user.displayName, pic: req.user.photos[0].value, email: req.user.emails[0].value })
 })
 
 app.get('/:slug', async (req, res) => {

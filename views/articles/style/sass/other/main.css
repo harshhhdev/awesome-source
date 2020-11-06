@@ -3,6 +3,8 @@
   font-family: "Inter", sans-serif;
   outline: none;
   border: none;
+  margin: 0;
+  word-wrap: break-word;
 }
 
 html {
@@ -15,5 +17,9 @@ a {
 
 a:hover {
   cursor: pointer;
+}
+
+.shift {
+  margin-left: 300px;
 }
 /*# sourceMappingURL=main.css.map */

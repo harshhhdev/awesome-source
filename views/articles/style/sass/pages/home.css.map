@@ -1,4 +1,6 @@
-
+{
+    "version": 3,
+    "mappings": "",
     "sources": [
         "home.sass"
     ],

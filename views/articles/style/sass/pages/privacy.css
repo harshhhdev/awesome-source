@@ -1,0 +1,39 @@
+.privacy-content {
+  width: 100%;
+  text-align: center;
+}
+
+.email {
+  color: #6A98F0;
+}
+
+.back-home {
+  padding-top: 30px;
+}
+
+.back-button {
+  width: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  border-radius: 50px;
+  font-size: 24px;
+  background: #6A98F0;
+  padding: 10px;
+  -webkit-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+
+.back-button:hover {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.privacy-pad {
+  padding-bottom: 30px;
+}
+/*# sourceMappingURL=privacy.css.map */
