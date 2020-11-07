@@ -82,14 +82,11 @@
 }
 
 .logo {
-  font-weight: bold;
   font-size: 24px;
-  text-transform: uppercase;
   margin-bottom: 1rem;
   text-align: center;
   color: #eeccee;
   background: #141418;
-  letter-spacing: 0.1ch;
   width: 100%;
 }
 
@@ -101,7 +98,7 @@
 }
 
 .logo-text {
-  font-size: 12px;
+  font-size: 18px;
   display: inline;
   position: absolute;
   left: -999px;

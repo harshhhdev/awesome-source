@@ -8,35 +8,8 @@
   <link rel="stylesheet" href="/articles-all.css" />
 </head>
 <body>
-  <div class="container account-container">
-    <div class="left">
-      <div class="top">
-        <div class="sidenav">
-          <div class="user-box">
-            <img src="<%= pic %>" class="user-picture" />
-          </div>
-          <div class="info">
-            <h1 class="info-username"><%= name %></h1>
-            <h1 class="info-email"><%= email %></h1>
-          </div>
-          <div class="buttons">
-            <div class="mid">
-              <div class="new dashboard-pad">
-                <a href="/new" class="new-article dashboard-button" id="new"><i class="fas fa-pen pad-i"></i>New Post</a>
-              </div>
-              <div class="home-box dashboard-pad">
-                <a href="/" class="home-button dashboard-button" id="home"><i class="fas fa-home pad-i"></i>Home</a>
-              </div>
-            </div>
-            <div class="bottom dashboard-pad">
-              <a href="/logout" class="logout dashboard-button"><i class="fas fa-sign-out-alt pad-i"></i>Logout</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="new-box shift">
+  <%- include('_dashboard.ejs') %> 
+  <div class="new-box">
     <h1 class="title-new">New Post</h1>
 
     <form action="/" method="POST" id="form-new">
