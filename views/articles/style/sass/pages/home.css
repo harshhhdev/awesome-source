@@ -1,1 +1,13 @@
-/* No CSS *//*# sourceMappingURL=home.css.map */
+.discover {
+  padding-left: 35px;
+  padding-bottom: 20px;
+  font-size: 48px;
+}
+
+@media only screen and (max-width: 600px) {
+  .discover {
+    padding-left: 0px;
+    padding-bottom: 0px;
+  }
+}
+/*# sourceMappingURL=home.css.map */

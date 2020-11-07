@@ -61,6 +61,7 @@ html {
   border-radius: 50px;
   -webkit-box-shadow: 3px 3px 15px #00000049;
           box-shadow: 3px 3px 15px #00000049;
+  color: #6A98F0;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
   display: -webkit-box;

@@ -16,15 +16,15 @@
 .card-body {
   border-radius: 12px;
   padding: 10px;
-  width: 50%;
+  width: 30%;
   background: #6A98F0;
   -webkit-transition: 0.1s linear all;
   transition: 0.1s linear all;
 }
 
 .card-body:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
+  -webkit-transform: translateY(-2.5px);
+          transform: translateY(-2.5px);
 }
 
 .readmore-div {
@@ -36,5 +36,30 @@
 
 .card-list {
   list-style: none;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+.card-title, .card-date {
+  padding-bottom: 10px;
+}
+
+.read {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  .card-body {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .article-card {
+    padding: 20px 0;
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=card.css.map */
