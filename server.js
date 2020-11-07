@@ -12,6 +12,7 @@ app.use(express.static(__dirname + '/views/articles/style'))
 app.use(express.static(__dirname + '/views/scripts'))
 app.use(express.static(__dirname + '/views/scripts'))
 app.use(express.static(__dirname + '/views/images'))
+app.use(express.static(__dirname + '/views/articles/style/icons'))
 
 mongoose.connect(process.env.MONGO_CONNECTION, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
