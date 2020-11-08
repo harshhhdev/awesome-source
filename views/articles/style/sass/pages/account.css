@@ -1,0 +1,100 @@
+.info-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+}
+
+.profile-displayName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 48px;
+}
+
+.text-info-account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 30px;
+}
+
+.account-info-title {
+  padding-left: 50px;
+  font-size: 60px;
+}
+
+.profile-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: grey;
+  padding: 10px 0;
+  font-size: 24px;
+}
+
+.fa-check-square {
+  margin-top: 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: #02b177;
+  padding-left: 8px;
+  font-size: 36px;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+}
+
+.profile-img {
+  padding-left: 50px;
+  -webkit-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+}
+
+.profile-img:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+
+.account-articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.posts-title {
+  padding: 50px;
+}
+/*# sourceMappingURL=account.css.map */

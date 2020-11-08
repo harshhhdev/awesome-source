@@ -78,7 +78,13 @@ app.set('view-engine', 'ejs')
 app.get('/privacy', (req, res) => {
   res.render('privacy.ejs', { name: req.user.displayName, pic: req.user.photos[0].value, email: req.user.emails[0].value })
 })
+
+app.get('/account', isLoggedIn, async (req, res) => {
+  const articles = await Article.find().sort({ createdAt: 'desc' })
+  res.render("account.ejs",{ article: articles, name: req.user.displayName, pic:req.user.photos[0].value, email: req.user.emails[0].value })
+})
   
+
 app.get('/login', (req, res) => {
     res.render('login.ejs')
 })
@@ -96,7 +102,7 @@ app.get('/:slug', async (req, res) => {
 })
 
 app.post('/', isLoggedIn, async (req, res, next) => {
-  console.log('Posting')
+  console.log('Posting...')
   req.article = new Article()
   next()
 }, saveArticleAndRedirect('new'))

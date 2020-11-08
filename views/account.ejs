@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - AwesomeSource</title>
+    <script src="https://kit.fontawesome.com/2ca6785a00.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/articles-all.css" />
+    <link rel="shortcut icon" href="/rocket.svg" type="image/x-icon" />
+</head>
+<body>
+   <%- include('./articles/_dashboard.ejs') %> 
+   <div class="main-content">
+      <h1 class="account-info-title">Account</h1>
+      <div class="info-profile">
+         <p id="filter-name" style="display: none;"><%= name %></p>
+
+         <div class="profile-img">
+            <img src="<%= pic %>" class="profile-picture">
+         </div>
+         <div class="text-info-account">
+            <h1 class="profile-displayName"><%= name %><i class="fas fa-check-square"></i><h4 class="profile-email"><%= email %></h4></h1>
+         </div>
+      </div>
+      
+      <h1 class="posts-title">Your posts</h1>
+      <ul id="articles" class="account-articles">
+         <% article.forEach(article => { %>
+           <li class="card-list">
+             <div class="article-card">
+               <div class="card-body">
+                 <h4 class="card-title card-color" id="article-title"><%= article.title %></h4>
+                 <p class="card-date card-color" id="username">Written by <%= article.username %></p>
+                 <p class="card-description card-color"><%= article.description %></p> 
+               </div>
+               <div class="readmore-div">
+                 <a href="/<%= article.slug %>" class="bluegrad button noselect read">Read More</a>
+               </div>
+             </div>
+           </li>
+         <% }) %>
+       </ul>
+   </div>
+</body>
+<script src="/articles-filter.js"></script>
+</html>
