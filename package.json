@@ -12,6 +12,7 @@
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
     "dompurify": "^2.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
@@ -26,6 +27,7 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
+    "path": "^0.12.7",
     "slugify": "^1.4.6"
   },
   "devDependencies": {

@@ -14,14 +14,17 @@
     align-self: center
     transition: 0.1s linear
     &:hover
-        transform: scale(1.05, 1.05)
-    &:placeholder
-        color: white
+        transform: translateY(-4px)
 
 .search
+    font-size: 20px
     background: none
+    color: white
     &:hover
         transform: translate(0, 0)
+
+::placeholder
+    color: #cccccc
 
 .search, .search-icon
     display: flex

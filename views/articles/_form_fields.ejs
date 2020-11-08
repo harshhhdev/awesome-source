@@ -1,14 +1,31 @@
-<div class="form-group">
-  <div class="form-title" id="form-title">
-    
+<form action="/" method="POST">
+  <div class="form-main">
+    <div class="form-group">
+      <input required value="<%= article.title %>" type="text" name="title" id="title" class="article-form" placeholder="Title" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <textarea name="description" id="description" class="form-description article-form" placeholder="Description"><%= article.description %></textarea>
+    </div>
+    <div class="form-group">
+      <input required name="link" id="link" class="form-link article-form" placeholder="Project Link" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <div class="preview-btn-parent">
+        <button class="preview-btn" id="preview" onclick="previewToggle()" type="button">Preview Markdown</button>
+      </div>
+      <div id="preview-markdown"></div>
+        <textarea required name="markdown" id="markdown" class="form-markdown article-form" placeholder="Markdown" oninput="addMarkdown()"><%= article.markdown %></textarea>
+      </div>
+    </div>
+    <div class="form-group" style="display: none;">
+      <textarea required name="username" id="name" class="form-name" style="display: none;"><%= name %></textarea>
+    </div>
+    <div class="form-group" style="display: none;">
+      <textarea required name="pic" id="pic" class="form-pic" style="display: none;"><%= pic %></textarea>
+    </div>
   </div>
-  <div class="form-description" id="form-description">
-    
+  <div class="btns">
+    <div class="cancel-button"><a href="/" class="bluegrad button noselect cancel">Cancel</a></div>
+    <div class="publish-button"><button type="submit" class="bluegrad button noselect publish"><i class="fas fa-rocket pad-i"></i>Publish</button></div>
   </div>
-  <div class="form-link" id="form-link">
-    
-  </div>
-  <div class="form-name" id="form-name">
-    
-  </div>
-</div>
+</form>

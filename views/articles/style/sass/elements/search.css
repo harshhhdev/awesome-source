@@ -23,21 +23,35 @@
 }
 
 .search-box:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
-}
-
-.search-box:placeholder {
-  color: white;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 
 .search {
+  font-size: 20px;
   background: none;
+  color: white;
 }
 
 .search:hover {
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+
+::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+:-ms-input-placeholder {
+  color: #cccccc;
+}
+
+::-ms-input-placeholder {
+  color: #cccccc;
+}
+
+::placeholder {
+  color: #cccccc;
 }
 
 .search, .search-icon {

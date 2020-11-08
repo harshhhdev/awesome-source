@@ -9,33 +9,10 @@
   <link rel="shortcut icon" href="/rocket.svg" type="image/x-icon" />
 </head>
 <body>
+  <%- include('_dashboard.ejs') %> 
   <div class="new-box main-content">
     <h1 class="title-new">New Post</h1>
-    <form action="/" method="POST">
-      <div class="form-group">
-        <input required value="<%= article.title %>" type="text" name="title" id="title" class="article-form" placeholder="Title" autocomplete="off">
-      </div>
-      <div class="form-group">
-        <textarea name="description" id="description" class="form-description article-form" placeholder="Description"><%= article.description %></textarea>
-      </div>
-      <div class="form-group">
-        <input required name="link" id="link" class="form-link article-form" placeholder="Project Link" autocomplete="off">
-      </div>
-      <div class="form-group">
-          <textarea required name="markdown" id="markdown" class="form-markdown article-form" placeholder="Markdown" oninput="addMarkdown()"><%= article.markdown %></textarea>
-        </div>
-      </div>
-      <div class="form-group" style="display: none;">
-        <textarea required name="username" id="name" class="form-name" style="display: none;"><%= name %></textarea>
-      </div>
-      <div class="form-group" style="display: none;">
-        <textarea required name="pic" id="pic" class="form-pic" style="display: none;"><%= pic %></textarea>
-      </div>
-      <div class="btns">
-        <div class="cancel-button"><a href="/" class="bluegrad button noselect cancel">Cancel</a></div>
-        <div class="publish-button"><button type="submit" class="bluegrad button noselect publish"><i class="fas fa-rocket"></i>Publish</button>
-      </div>
-    </form>
+    <%- include('_form_fields.ejs') %>
   </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> 
