@@ -27,6 +27,10 @@
           transform: scale(1.05, 1.05);
 }
 
+.search-box:placeholder {
+  color: white;
+}
+
 .search {
   background: none;
 }

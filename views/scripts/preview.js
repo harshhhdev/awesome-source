@@ -6,14 +6,14 @@ var previewMarkdown = false;
 
 function previewToggle() {
     if (previewMarkdown) {
-        preview.innerHTML = 'Write Markdown'
+        preview.innerHTML = '<i class="fas fa-eye-slash"></i>Write Markdown'
 
         form.style.display = "none"
         previewPage.style.display = "flex"
 
         previewMarkdown = false
     } else {
-        preview.innerHTML = 'Preview Markdown'
+        preview.innerHTML = '<i class="fas fa-eye"></i>Preview Markdown'
 
         form.style.display = "flex"
         previewPage.style.display = "none"

@@ -1,75 +1,40 @@
-$form-background: #6D83F2
+$primary: #6D83F2
+$whitey: #F8F8F8
+$g-bord: #EAEEFF 3px solid
 
 form
     display: flex
     flex-direction: column
-    justify-content: center
-    align-items: center
 
-.form-title
-    background: $form-background
-    resize: none
+.form-main
+    border: $g-bord
     border-radius: 12px
-    height: 50px
-    padding: 10px
-    font-size: 20px
-
-.form-description
-    background: $form-background
-    resize: none
-    border-radius: 12px
-    height: 100px
-    padding: 10px
-    width: 400px
-    font-size: 16px
-
-.form-markdown
-    background: $form-background
-    padding: 10px
-    font-size: 20px
-    border-radius: 12px
-    resize: vertical
-    width: 800px
-    height: 500px
-
-.form-group
-    display: flex
-    flex-direction: column
-    padding: 20px 0
-    justify-content: center
-    align-items: center
-
-.buttons
-    justify-content: center
-    margin-left: 4%
-
-textarea
-    color: white
-    transition: 0.2s linear all
-    &:hover
-        transform: translateY(-5px)
-        cursor: pointer
-
-input
-    color: white
-    transition: 0.2s linear all
-    &:hover
-        cursor: pointer
-        transform: translateY(-5px)
 
 ::placeholder
-    color: #dbdbdb
+    color: #adadad
 
-#preview-markdown
-    padding-top: 0
-    background: $form-background
+.form-group
+    padding: 20px
+
+.article-form
+    background: $whitey
     padding: 10px
     font-size: 20px
-    color: white
-    transition: 0.2s linear all
-    border-radius: 12px
-    width: 800px
-    height: 500px
 
-#preview-markdown p h1 h2 h3 h4 h5 h6
-    margin: 1px 0 !important
+.form-title, .form-link, .form-description
+    width: 30%
+
+.form-description
+    resize: none
+    overflow-y: hidden
+    max-width: 30%
+
+.form-markdown
+    font-size: 16px
+    width: 50%
+    max-width: 50%
+    resize: none
+    height: 300px
+    border: $g-bord
+    overflow: hidden
+    border-radius: 12px

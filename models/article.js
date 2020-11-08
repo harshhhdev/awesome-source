@@ -13,6 +13,10 @@ const articleSchema = new mongoose.Schema({
   description: {
     type: String
   },
+  link: {
+    type: String,
+    required: true
+  },
   markdown: {
     type: String,
     required: true
@@ -22,9 +26,10 @@ const articleSchema = new mongoose.Schema({
     required: true,
     default: "anonymous"
   },
-  link: {
-    type: String,
-    required: true
+  pic: {
+    type: String, 
+    required: true,
+    default: "https://image.flaticon.com/icons/png/512/172/172163.png"
   },
   createdAt: {
     type: Date,

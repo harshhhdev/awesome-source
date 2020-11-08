@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://kit.fontawesome.com/2ca6785a00.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/articles-all.css" />
@@ -9,15 +10,18 @@
   <link rel="shortcut icon" href="/rocket.svg" type="image/x-icon" />
 </head>
 <body>
+  <%- include('_dashboard.ejs') %>
   <div class="show-box">
     <h1 class="title show-title"><%= article.title %></h1>
     <div class="post-markdown">
       <%- article.sanitizedHtml %>
     </div>
     <div class="show-date">
-      <%= article.createdAt.toLocaleDateString() %> | Written by <%= article.username %>
+      Written by <%= article.username %> <img src="<%= article.pic %>" class="user-image" />
     </div>
   </div>
+
+  <!-- <%= article.createdAt.toLocaleDateString() %> -->
 
   <div class="buttons show-buttons">
     <div class="home-parent">

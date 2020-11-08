@@ -7,8 +7,14 @@ const passport = require('passport')
 const Article = require('./models/article')
 require('./passport-config')
 
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
 app.use(express.static(__dirname + '/views/styling'))
 app.use(express.static(__dirname + '/views/articles/style'))
+app.use(express.static(__dirname + '/views/scripts'))
 app.use(express.static(__dirname + '/views/scripts'))
 app.use(express.static(__dirname + '/views/scripts'))
 app.use(express.static(__dirname + '/views/images'))
@@ -80,7 +86,7 @@ app.get('/login', (req, res) => {
 app.set('view engine', 'ejs')
 
 app.get('/new', isLoggedIn, (req, res) => {
-  res.render('articles/new', { article: new Article(), name: req.user.displayName, pic: req.user.photos[0].value, email: req.user.emails[0].value })
+  res.render('articles/new', { article: new Article(), name: req.user.displayName, pic: req.user.photos[0].value })
 })
 
 app.get('/:slug', async (req, res) => {
@@ -108,13 +114,16 @@ function saveArticleAndRedirect(path) {
 
     article.title = req.body.title
     article.description = req.body.description
+    article.link = req.body.link
     article.markdown = req.body.markdown
     article.username = req.body.username
-    article.link = req.body.link
+    article.pic = req.body.pic
     
     try {
+      console.log('Saving...')
       article = await article.save()
       res.redirect(`/${article.slug}`)
+      console.log('Done!')
     } catch (e) {
       console.log(e)
       res.render(`/${path}`, { article: article })
