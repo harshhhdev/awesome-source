@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGO_CONNECTION, {
 }, () => console.log('Connected to Database.'))
   
 app.use(cookieSession({
-  name: 'tuto-session',
+  name: 'awesomesource',
   keys: ['key1', 'key2']
 }))
 
