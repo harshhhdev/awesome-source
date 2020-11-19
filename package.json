@@ -29,10 +29,10 @@
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
+    "dotenv": "^8.2.0",
     "slugify": "^1.4.6"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
     "nodemon": "^2.0.6"
   }
 }
