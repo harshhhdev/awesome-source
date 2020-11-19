@@ -51,11 +51,6 @@ app.get('/', isLoggedIn, async (req, res) => {
 
 app.get('/failed', (req, res) => res.send('You Failed to log in!'))
 
-app.get('/', isLoggedIn, async (req, res) => {
-  const articles = await Article.find().sort({ createdAt: 'desc' })
-  res.render("index",{ article: articles, name: req.user.displayName, pic:req.user.photos[0].value, email: req.user.emails[0].value })
-})
-
 // Auth Routes
 app.get('/google', passport.authenticate('google', { 
   scope: ['profile', 'email'] 
@@ -74,10 +69,6 @@ app.get('/logout', (req, res) => {
 })
   
 app.set('view-engine', 'ejs')
-
-app.get('/privacy', (req, res) => {
-  res.render('privacy.ejs', { name: req.user.displayName, pic: req.user.photos[0].value, email: req.user.emails[0].value })
-})
 
 app.get('/account', isLoggedIn, async (req, res) => {
   const articles = await Article.find().sort({ createdAt: 'desc' })
@@ -122,8 +113,9 @@ function saveArticleAndRedirect(path) {
     article.description = req.body.description
     article.link = req.body.link
     article.markdown = req.body.markdown
-    article.username = req.body.username
-    article.pic = req.body.pic
+    article.username = req.user.displayName
+    article.pic = req.user.photos[0].value
+    article.reactions = 0
     
     try {
       console.log('Saving...')
