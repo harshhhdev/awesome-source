@@ -4,6 +4,7 @@
   "description": "A website to share open source projects",
   "main": "server.js",
   "scripts": {
+    "run": "node server.js",
     "devStart": "nodemon server.js"
   },
   "author": "Harsh Singh",
