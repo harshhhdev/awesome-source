@@ -1,172 +1,90 @@
-.main-content {
-  margin-left: 5rem;
-  padding: 1rem;
-}
-
-.navbar {
-  z-index: 9999;
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
-  background-color: #23232e;
-  -webkit-transition: width 600ms ease;
-  transition: width 600ms ease;
-  overflow: hidden;
+  width: 100%;
+  z-index: 999999;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 20px;
 }
 
 .navbar-nav {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  list-style: none;
+  background: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
 }
 
 .nav-item {
-  width: 100%;
-}
-
-.nav-link {
+  width: 4rem;
+  height: 4rem;
+  color: #515151;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 5rem;
-  color: #b6b6b6;
-  text-decoration: none;
-  -webkit-filter: grayscale(100%) opacity(0.7);
-          filter: grayscale(100%) opacity(0.7);
-  -webkit-transition: 600ms;
-  transition: 600ms;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 7px;
 }
 
-.nav-link:hover {
-  -webkit-filter: grayscale(0%) opacity(1);
-          filter: grayscale(0%) opacity(1);
-  background: #141418;
-  color: #eeccee;
+.nav-item:hover {
+  background: #6D83F2;
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 
-.link-text {
-  display: none;
-  margin-left: 1rem;
+.nav-item:hover a {
+  color: #ffffff;
 }
 
-.nav-link .icon-font {
-  width: 2rem;
-  min-width: 2rem;
-  margin: 0 1.5rem;
-}
-
-.fa-primary {
-  color: #ff7eee;
-}
-
-.fa-secondary {
-  color: #df49a6;
-}
-
-.fa-primary,
-.fa-secondary {
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-
-.logo {
-  font-size: 24px;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #eeccee;
-  background: #141418;
-  width: 100%;
-}
-
-.logo .icon-font {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-
-.logo-text {
-  font-size: 18px;
-  display: inline;
-  position: absolute;
-  left: -999px;
-  -webkit-transition: 600ms;
-  transition: 600ms;
-}
-
-.navbar:hover .logo .icon-font {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
-/* Small screens */
-@media only screen and (max-width: 600px) {
-  .main-content {
-    margin-left: 1rem;
-  }
-  .navbar {
-    bottom: 0;
-    width: 105vw;
-    height: 5rem;
-  }
-  .logo {
-    display: none;
-  }
+@media only screen and (min-width: 642px) {
   .navbar-nav {
-    -webkit-box-orient: horizontal;
+    width: 4rem;
+    height: 80vh;
+    left: 2rem;
+    top: 5vh;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    padding: 3rem 0;
   }
-  .nav-link {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .main-content {
+    padding-left: 100px;
   }
 }
 
-/* Large screens */
-@media only screen and (min-width: 600px) {
-  .navbar {
-    top: 0;
-    width: 5rem;
-    height: 103vh;
+@media only screen and (max-width: 641px) {
+  .navbar-nav {
+    bottom: 2rem;
+    left: 5vw;
+    height: 4rem;
+    padding: 0 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .navbar:hover {
-    width: 16rem;
-  }
-  .navbar:hover .link-text {
-    display: inline;
-  }
-  .navbar:hover .logo .icon-font {
-    margin-left: 11rem;
-  }
-  .navbar:hover .logo-text {
-    left: 0px;
-  }
-  .theme-icon {
-    display: none;
-  }
-  .dark #darkIcon {
-    display: block;
-  }
-  .light #lightIcon {
-    display: block;
-  }
-  .solar #solarIcon {
-    display: block;
+  .main-content {
+    padding-left: 0;
   }
 }
 /*# sourceMappingURL=sidebar.css.map */
