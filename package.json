@@ -22,12 +22,13 @@
     "mongoose": "^5.10.11",
     "passport": "^0.4.1",
     "passport-google-oauth2": "^0.2.0",
+    "path": "^0.12.7",
     "slugify": "^1.4.6"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.6"
-  },  
+  },
   "engines": {
     "node": "14.15.0"
   }
