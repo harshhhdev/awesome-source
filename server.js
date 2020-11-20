@@ -81,7 +81,7 @@ app.get('/account', isLoggedIn, async (req, res) => {
 })
   
 
-app.get('/login', (req, res) => {
+app.get('/login', async (req, res) => {
     res.render('login.ejs')
 })
   
