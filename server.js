@@ -48,7 +48,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Example protected and unprotected routes
-app.get('/', isLoggedIn, async (req, res) => {
+app.get('/', async (req, res) => {
   const articles = await Article.find().sort({ createdAt: 'desc' })
   res.render('index', { articles: articles, name: req.user.displayName, pic: req.user.photos[0].value, email: req.user.emails[0].value })
 })
