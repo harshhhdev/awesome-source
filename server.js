@@ -31,7 +31,7 @@ app.use(cookieSession({
   keys: ['key1', 'key2']
 }))
 
-app.set('views', path.join(__dirname, 'views'))
+app.set('view', path.join(__dirname, 'views'))
 app.set('view engine','ejs')
 
 const isLoggedIn = (req, res, next) => {
