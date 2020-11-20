@@ -6,7 +6,6 @@ const cookieSession = require('cookie-session')
 const passport = require('passport')
 const Article = require('./models/article')
 require('./passport-config')
-const aws = require('aws-sdk')
 
 const bodyParser = require('body-parser')
 
