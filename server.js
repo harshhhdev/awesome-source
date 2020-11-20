@@ -71,8 +71,6 @@ app.get('/logout', (req, res) => {
   req.logout()
   res.redirect('/login')
 })
-  
-app.set('view-engine', 'ejs')
 
 app.get('/account', isLoggedIn, async (req, res) => {
   const articles = await Article.find().sort({ createdAt: 'desc' })
