@@ -32,7 +32,7 @@ app.use(cookieSession({
 }))
 
 app.set('view', path.join(__dirname, 'views'))
-app.set('view engine','ejs')
+app.set('view-engine','ejs')
 
 const isLoggedIn = (req, res, next) => {
   if (req.user) {
