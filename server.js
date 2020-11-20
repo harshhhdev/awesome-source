@@ -19,6 +19,11 @@ app.use(express.static(__dirname + '/views/scripts'))
 app.use(express.static(__dirname + '/views/images'))
 app.use(express.static(__dirname + '/views/articles/style/icons'))
 
+console.log(process.env.GOOGLE_CALLBACK_URL)
+console.log(process.env.GOOGLE_CLIENT_ID)
+console.log(process.env.GOOGLE_CLIENT_SECRET)
+console.log(process.env.SESSION_SECRET)
+
 mongoose.connect(process.env.MONGO_CONNECTION, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 }, () => console.log('Connected to Database.'))
