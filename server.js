@@ -58,6 +58,7 @@ app.get('/google', passport.authenticate('google', {
 
 app.get('/google/callback', passport.authenticate('google', { failureRedirect: '/failed' }),
   function(req, res) {
+    console.log('Signed in!')
     res.redirect('/');
   }
 );

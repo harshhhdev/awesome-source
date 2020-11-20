@@ -10,8 +10,6 @@
   "author": "Harsh Singh",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.796.0",
-    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "cookie-session": "^1.4.0",
     "cors": "^2.8.5",
