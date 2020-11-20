@@ -81,8 +81,6 @@ app.get('/account', isLoggedIn, async (req, res) => {
 app.get('/login', async (req, res) => {
     res.render('login.ejs')
 })
-  
-app.set('view engine', 'ejs')
 
 app.get('/new', isLoggedIn, (req, res) => {
   res.render('articles/new', { article: new Article(), name: req.user.displayName, pic: req.user.photos[0].value })
