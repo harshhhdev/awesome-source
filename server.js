@@ -83,7 +83,7 @@ app.get('/login', async (req, res) => {
     res.render('login.ejs')
 })
 
-app.get('/new', isLoggedIn, (req, res) => {
+app.get('/new', (req, res) => {
   res.render('articles/new', { article: new Article(), name: req.user.displayName, pic: req.user.photos[0].value })
 })
 
