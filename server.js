@@ -49,6 +49,7 @@ app.use(passport.session());
 // Example protected and unprotected routes
 app.get('/', async (req, res) => {
   const articles = await Article.find().sort({ createdAt: 'desc' })
+  console.log(await Article.find().sort({ createdAt: 'desc'}))
   res.render('index', { articles: articles })
 })
 
